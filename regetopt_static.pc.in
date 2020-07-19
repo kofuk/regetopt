@@ -1,0 +1,13 @@
+# This file is part of regetopt.
+# reGetopt is licensed under GNU GPL v3 or MIT License.
+
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/regetopt
+
+Name: regetopt_static
+Description: clone of GNU getopt
+Version: 0.0.1
+Libs: -L${libdir} -lregetopt_static
+Cflags: -I${includedir}
