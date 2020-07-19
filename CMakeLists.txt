@@ -11,7 +11,7 @@ add_library(regetopt_static STATIC regetopt.c)
 add_library(regetopt SHARED regetopt.c)
 
 add_executable(sample EXCLUDE_FROM_ALL sample.c)
-target_link_libraries(sample PRIVATE regetopt)
+target_link_libraries(sample PRIVATE regetopt_static)
 
 configure_file(regetopt.pc.in regetopt.pc @ONLY)
 configure_file(regetopt_static.pc.in regetopt_static.pc @ONLY)
