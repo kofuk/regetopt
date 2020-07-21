@@ -4,10 +4,10 @@
 prefix=@CMAKE_INSTALL_PREFIX@
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
-includedir=${prefix}/include/regetopt
+includedir=${prefix}/include
 
 Name: regetopt_static
 Description: clone of GNU getopt
-Version: 0.0.1
+Version: 0.0.2
 Libs: -L${libdir} -lregetopt_static
 Cflags: -I${includedir}
