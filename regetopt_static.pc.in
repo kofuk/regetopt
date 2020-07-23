@@ -7,7 +7,7 @@ libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 
 Name: regetopt_static
-Description: clone of GNU getopt
-Version: 0.0.2
+Description: @PROJECT_DESCRIPTION@
+Version: @PROJECT_VERSION@
 Libs: -L${libdir} -lregetopt_static
 Cflags: -I${includedir}

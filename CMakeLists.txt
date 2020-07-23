@@ -1,7 +1,11 @@
 # This file is part of regetopt.
 # reGetopt is licensed under GNU GPL v3 or MIT License.
 
-project(regetopt C CXX)
+cmake_policy(SET CMP0048 NEW)
+project(regetopt
+  VERSION 0.0.3
+  DESCRIPTION "clone of GNU getopt"
+  LANGUAGES C CXX)
 cmake_minimum_required(VERSION 3.15)
 
 enable_testing()
