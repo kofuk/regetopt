@@ -9,6 +9,7 @@ find_package(Boost COMPONENTS unit_test_framework)
 
 add_library(regetopt_static STATIC regetopt.c)
 add_library(regetopt SHARED regetopt.c)
+target_compile_definitions(regetopt PUBLIC -DREGETOPT_DLL)
 set_target_properties(regetopt regetopt_static PROPERTIES
   PUBLIC_HEADER include/regetopt.h)
 

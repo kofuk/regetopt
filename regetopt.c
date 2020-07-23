@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 
+#define REGETOPT_INTERNAL 1
 #include "include/regetopt.h"
 
 char *re_optarg;

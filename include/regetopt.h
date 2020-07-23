@@ -12,6 +12,18 @@
 #define END_DECL
 #endif
 
+#if defined(_WIN32) && defined(REGETOPT_DLL)
+/* if it is Windows DLL build or about to link to DLL,
+   define symbols as exported. */
+#ifdef REGETOPT_INTERNAL
+#define REGETOPT_API __declspec(dllexport)
+#else
+#define REGETOPT_API __declspec(dllimport)
+#endif
+#else
+#define REGETOPT_API
+#endif
+
 BEGIN_DECL
 
 #define re_no_argument 0
@@ -25,11 +37,11 @@ struct re_option {
     int val;
 };
 
-extern char *re_optarg;
-extern int re_optind, re_opterr, re_optopt;
+REGETOPT_API extern char *re_optarg;
+REGETOPT_API extern int re_optind, re_opterr, re_optopt;
 
-int regetopt(int argc, char **argv, const char *optstring,
-             struct re_option *longopts, int *longindex);
+REGETOPT_API int regetopt(int argc, char **argv, const char *optstring,
+                          struct re_option *longopts, int *longindex);
 
 END_DECL
 
